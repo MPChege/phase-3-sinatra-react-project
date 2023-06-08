@@ -2,7 +2,7 @@ puts "🌱 Seeding data..."
 
 puts "🌱 house categories..."
 studio = Category.create(category: "studio")
-two_bedroom = Category.create(category: "2 bendroom")
+two_bedroom = Category.create(category: "2 Bedroom")
 three_bedroom = Category.create(category: "3 bedroom")
 four_bedroom = Category.create(category: "4 bedroom")
 five_bedroom = Category.create(category: "5 bedroom")

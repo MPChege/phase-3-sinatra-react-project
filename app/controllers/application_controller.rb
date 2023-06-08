@@ -174,7 +174,8 @@ class ApplicationController < Sinatra::Base
 
   # POST ---------------------------------------------------------------------------
   post '/houses' do
-    requested_house = get_house(get_house_details(params))
+    pp params
+    # requested_house = get_house(get_house_details(params))
 
     if no_nil_entry(params)
       new_house = House.create(
@@ -287,7 +288,7 @@ class ApplicationController < Sinatra::Base
 
   def get_location(location_name:)
     if location_name.is_a?(String)
-      location = Location.find_by(location: location_name)
+      location = Location.find_by(name: location_name)
       location_exists = !location.nil?
       if location_exists
         return location
